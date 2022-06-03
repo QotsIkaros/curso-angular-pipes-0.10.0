@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
+
 import { NumerosComponent } from './pages/numeros/numeros.component';
 import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
-import { mayusculas } from './pages/pipes/mayusculas.pipe';
-
-
-
+import { MayusculasPipe } from './pages/pipes/mayusculas.pipe';
+import { VuelaPipe } from './pages/pipes/vuela.pipe';
+import { OrdenarPipe } from './pages/pipes/ordenar.pipe'
 
 @NgModule({
   declarations: [
@@ -18,13 +18,17 @@ import { mayusculas } from './pages/pipes/mayusculas.pipe';
     NoComunesComponent, 
     BasicosComponent, 
     OrdenarComponent,
-    mayusculas
+
+    //pipes
+    MayusculasPipe,
+    VuelaPipe,
+    OrdenarPipe
   ],
   exports: [
     NumerosComponent, 
     NoComunesComponent, 
     BasicosComponent, 
-    OrdenarComponent
+    OrdenarComponent,
   ],
   imports: [
     CommonModule,
